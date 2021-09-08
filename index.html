@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--below is link to blocks after BEM is divided-->
-  <link rel="stylesheet" href="Pages/index.css" />
+  <link rel="stylesheet" href="pages/index.css" />
   <!--below is link single stylesheet before BEM is divided-->
-  <link rel="stylesheet" href="Pages/index.css" />
+  <link rel="stylesheet" href="pages/index.css" />
   <title>This is my practice page</title>
 </head>
 
@@ -15,56 +15,84 @@
   <header class="header">
     <h1 class="header__title">Javascript Notes</h1>
   </header>
-<section class="intro">
+  <section class="intro">
 
     <h2 class="intro__title">What are we learning about?</h1>
-    <ul class="intro__list-title">
-      <li class="intro__list-item">data types</li>
-      <li class="intro__list-item">conditions</li>
-      <li class="intro__list-item">loops</li>
-      <li class="intro__list-item">arrays</li>
-      <li class="intro__list-item">functions</li>
-    </ul>
-</section>
-<section class="subintro">
-<h2 class="subintro__title">Intro to Primatives, Conditions and Loops</h2>
-<p class="notes"></p>
+      <ul class="intro__list-title">
+        <li class="intro__list-item">data types</li>
+        <li class="intro__list-item">conditions</li>
+        <li class="intro__list-item">loops</li>
+        <li class="intro__list-item">arrays</li>
+        <li class="intro__list-item">functions</li>
+      </ul>
+  </section>
+  <section class="subintro">
+    <h2 class="subintro__title">Intro to Primatives, Conditions and Loops</h2>
+    <p class="notes"></p>
+    <hr>
+    <p class="vocab__word"><code class="inline_code">let</code> Declares a variable, this is ES6. Let does not allow you
+      to use a variable before it is declared</p>
+    <p class="vocab__word"><code class="inline_code">const</code> Declares constant variables. Once you have initialzed
+      it with a value, it can't be changed</p>
+    <p class="vocab__word"><code class="inline_code">var</code> Also declares a variable, this is the old way. (pre ES6)
+    </p>
+    <hr>
+    <h2 class="subintro">Javascript has two different data types</h2>
+    <p class="vocab__word">Object have properites consisting of key-value pairs</p>
+    <p class="vocab__word">Primatives(elementary types) which have only values.</p>
+    <p class="vocab__word">String</p>
+    <p class="vocab__word">Number</p>
+    <p class="vocab__word">Boolean have a value of <code class="inline_code">true</code>or<code
+        class="inline_code">false</code></p>
+    <p class="vocab__word"><code class="inline_code">BigInt</code>
+    </p>
+    <p class="vocab__word"><code class="inline_code">undefined</code> abscence of value, value has not been defined. It
+      is both a type and a value. A function will also return <code class="inline_code">undefined</code> if the
+      variables have no value. When working with objects, if you try to refer to a porperty that is doesnt have, it will
+      return <code class="inline_code">undefined</code> </p>
+    <p class="vocab__word">Symbol</p>
+    <p class="vocab__word"><code class="inline_code">null</code> abscence of value. Indicates that the value you've
+      assigned a variable does not exist. When using <code class="inline_code">querySelector()</code> method returns
+      <code class="inline_code">null</code> when you pass though a class selector that doesn't exist in any element
+      within the document.</p>
 
-<p class="vocab__word">let</p><p class="def">Declares a variable, this is ES6.  Let does not allow you to use a variable before it is declared</p>
-<p class="vocab__word">const</p><p class="def">Declares constant variables.  Once you have initialzed it with a value, it can't be changed</p>
-<p class="vocab__word">var</p><p class="def">Also declares a variable, this is the old way. (pre ES6)</p>
+      <blockquote class="block-quote">When using <code class="inline_code">typeof</code> to determine the data type of <code class="inline_code">null</code> ot returns <code class="inline_code">object</code>  Don't fall for it.  Its a bug.</blockquote>
 
-<h2 class="subintro">Primatives-different data types</h2>
-<p class="vocab__word">String</p><p class="def"></p>
-<p class="vocab__word">Number</p><p class="def"></p>
-<p class="vocab__word">Boolean</p><p class="def"></p>
-<p class="vocab__word">BigInt</p><p class="def"></p>
-<p class="vocab__word">Undefines</p><p class="def"></p>
-<p class="vocab__word">Symbol</p><p class="def"></p>
-<p class="vocab__word">Null</p><p class="def"></p>
 
-<h2 class="subintro">How do you convert one data type to another</h2>
-<p class="vocab__word">Implicit Type Conversion</p><p class="def"></p>
-<p class="vocab__word">Explicit Type Conversion</p><p class="def"></p>
-
-<h2 class="subintro">Operators</h2>
-<p class="vocab__word">and &&</p><p class="def"></p>
-<p class="vocab__word">or ||</p><p class="def"></p>
-<p class="vocab__word">not !</p><p class="def"></p>
-
-<h2 class="subintro">How do you keep your code neat?</h2>
-<p class="vocab__word">Switch-Case statements</p><p class="def"></p>
-<p class="vocab__word">Ternary Operator</p><p class="def"></p>
-
-<h2 class="subintro">How do you prevent infinate loops?</h2>
-<p class="vocab__word">Break Statement</p><p class="def"></p>
-<p class="vocab__word">Continue Statement</p><p class="def"></p>
-</section>
-
-<!--have this link open in a new window-->
-<blockquote class="block-quote"><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">Where can I find the latest and greatest about JavaScript?</a></blockquote>
-
-<pre class="javascript code-block">
+    <hr>
+    <p class="vocab__word"><code class="inline_code">typeof</code>use this operator to check the operand. It will return
+      a string letting you know what the type. Use parentheses if you what to know the type of the entire expression.
+    </p>
+    <code>typeof NaN; // "number" - Yes, "Not a Number" is actually a "number".
+typeof null; // "object" - This is actually an officially recognized bug in JavaScript, but they decided not to fix it to avoid backward compatibility issues.
+typeof function () {} // "function" - Even though there's no such data type.</code>
+    <h2 class="subintro">How do you convert one data type to another</h2>
+    <p class="vocab__word">Implicit Type Conversion</p>
+    <p class="vocab__word">Explicit Type Conversion</p>
+    <hr>
+    <h2 class="subintro">Operators</h2>
+    <p class="vocab__word">and &&</p>
+    <p class="vocab__word">or ||</p>
+    <p class="vocab__word">not !</p>
+    <hr>
+    <h2 class="subintro">How do you keep your code neat?</h2>
+    <p class="vocab__word">Switch-Case statements</p>
+    <p class="vocab__word">Ternary Operator</p>
+    <hr>
+    <h2 class="subintro">How do you prevent infinate loops?</h2>
+    <p class="vocab__word">Break Statement</p>
+    <p class="vocab__word">Continue Statement</p>
+  </section>
+  <hr>
+  <!--have this link open in a new window-->
+  <blockquote class="block-quote"><a
+      href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">Where can I find the
+      latest and greatest about JavaScript?</a></blockquote>
+  <hr>
+  <h2 class="subintro"><code class="inline_code">let</code> is the new <code class="inline_code">var</code></h2>
+  <p>With the release of ES6, <code class="inline_code">let</code> replaced <code class="inline_code">var</code>
+    keyword. <code class="inline_code">let</code>prevents the use of a variable before it is declared.</p>
+  <pre class="javascript code-block">
 <div class="codewrapper">
   <code class="javascript">
     let championOfTheWorld = "France";
@@ -72,7 +100,17 @@
 
     olympicChampion = "The United Kingdom";</code>
   </pre>
-</div>
+  </div>
+
+  <h2 class="subintro"><code class="inline_code">const</code> prevents you from redeclaring a whole array. </h2>
+  <p>You will be able to add and remove elements with <code class="inline_code">const</code></p>
+  <blockquote class="block-quote">Use <code class="inline_code">const</code> whenever possible and only use <code
+      class="inline_code">let</code> when you know you will need to change the value of the variable. This will keep
+    your code neat. </blockquote>
+
+  <hr>
+
+
 
 
 
@@ -92,6 +130,6 @@
 
   </footer>
 </body>
-<script src="Pages/script.js" async="" defer=""></script>
-<script src="https://gist.github.com/salcode/10017553.js"></script>
+<script src="pages/script.js" async="" defer=""></script>
+
 </html>
