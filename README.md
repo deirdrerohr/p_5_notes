@@ -1,5 +1,5 @@
-# RPOJECT TITLE HERE
-## DESCRIPTION OF PROJECT
+# Javascript Notes
+## I am working on my javascript, css and html skills while learing javascript.  Content is from learning material from Yandex Practicum.  This document is a work in progress.
 
 ### What Did I Learn?
 * BULLET STATEMENTS ABOUT WHAT YOU LEARNED
